@@ -1,3 +1,150 @@
+/* ===========================
+   ESTILOS BÁSICOS DEL DOCUMENTO
+=========================== */
+
+/* Aplica a todo el cuerpo del documento */
 body {
-  background-color: rgb(203, 123, 18);
+  background: linear-gradient(
+    135deg,
+    #f5af19,
+    #f12711
+  ); /* Fondo degradado en diagonal */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna */
+  color: #fff; /* Color del texto */
+  margin: 0; /* Quita márgenes por defecto */
+  padding: 20px; /* Añade espacio interno */
+  line-height: 1.6; /* Espaciado entre líneas */
+}
+
+/* ===========================
+   TÍTULOS (H1 - H6)
+=========================== */
+
+/* Todos los encabezados comparten estilo base */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
+  letter-spacing: 2px; /* Espaciado entre letras */
+  text-align: center; /* Centra los títulos */
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* Diferenciamos el H1 con un estilo más llamativo */
+h1 {
+  font-size: 2.5em; /* Tamaño de letra grande */
+  color: #fff;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
+}
+
+/* Animación suave al pasar el mouse sobre los títulos */
+h2:hover {
+  color: #ffeb3b; /* Cambia a amarillo */
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+/* ===========================
+   PÁRRAFOS
+=========================== */
+
+p {
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+  padding: 15px;
+  border-radius: 10px; /* Bordes redondeados */
+  max-width: 800px;
+  margin: 20px auto; /* Centra el párrafo */
+  font-size: 1.1em;
+}
+
+/* ===========================
+   IMÁGENES
+=========================== */
+
+/* Todas las imágenes */
+img {
+  display: block; /* Quita espacios abajo */
+  margin: 20px auto; /* Centra la imagen */
+  max-width: 80%; /* No supera el ancho del contenedor */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4); /* Sombra elegante */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Efecto zoom al pasar el mouse */
+img:hover {
+  transform: scale(1.05); /* Aumenta un poco el tamaño */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* Sombra más intensa */
+}
+
+/* ===========================
+   VIDEOS (IFRAMES)
+=========================== */
+
+iframe {
+  display: block;
+  margin: 40px auto;
+  border: 3px solid #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+/* Al pasar el mouse, el video se resalta */
+iframe:hover {
+  transform: scale(1.03);
+}
+
+/* ===========================
+   LÍNEAS DIVISORAS (HR)
+=========================== */
+
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, #fff, transparent);
+  margin: 40px auto;
+  width: 70%;
+  opacity: 0.6;
+}
+
+/* ===========================
+   ANIMACIÓN SUTIL DE ENTRADA
+=========================== */
+
+/* Agrega una animación al cargar el contenido */
+body {
+  animation: fadeIn 1.5s ease-in-out; /* Usa la animación "fadeIn" */
+}
+
+/* Definimos la animación */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Comienza invisible */
+    transform: translateY(20px); /* Desplazado hacia abajo */
+  }
+  to {
+    opacity: 1; /* Termina visible */
+    transform: translateY(0); /* Posición normal */
+  }
+}
+
+/* ===========================
+   BONUS: ESTILO PARA LOS COMENTARIOS EDUCATIVOS
+=========================== */
+
+/* Solo para que veas cómo se vería un bloque de notas o tips */
+.note {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px 15px;
+  border-left: 5px solid #ffeb3b;
+  border-radius: 5px;
+  max-width: 700px;
+  margin: 30px auto;
+  font-style: italic;
+  color: #000;
 }
