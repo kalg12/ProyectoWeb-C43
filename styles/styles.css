@@ -10,42 +10,48 @@ body {
     #f12711
   ); /* Fondo degradado en diagonal */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna */
-  color: #fff; /* Color del texto */
   margin: 0; /* Quita márgenes por defecto */
   padding: 20px; /* Añade espacio interno */
-  line-height: 1.6; /* Espaciado entre líneas */
+  color: #fff; /* Texto claro para contrastar con el fondo */
+  animation: fadeIn 1.5s ease-in-out; /* Usa la animación "fadeIn" */
 }
 
 /* ===========================
-   TÍTULOS (H1 - H6)
+   TÍTULOS (HEADINGS)
 =========================== */
 
-/* Todos los encabezados comparten estilo base */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  text-transform: uppercase; /* Convierte el texto a mayúsculas */
-  letter-spacing: 2px; /* Espaciado entre letras */
-  text-align: center; /* Centra los títulos */
+  text-align: center;
   margin-top: 30px;
   margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* Diferenciamos el H1 con un estilo más llamativo */
+/* Colores por nivel */
 h1 {
-  font-size: 2.5em; /* Tamaño de letra grande */
   color: #fff;
-  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
+  font-size: 2.2em;
 }
-
-/* Animación suave al pasar el mouse sobre los títulos */
-h2:hover {
-  color: #ffeb3b; /* Cambia a amarillo */
-  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
-  transition: all 0.3s ease; /* Transición suave */
+h2 {
+  color: #fff8e1;
+}
+h3 {
+  color: #ffe082;
+}
+h4 {
+  color: #ffd54f;
+}
+h5 {
+  color: #ffca28;
+}
+h6 {
+  color: #ffc107;
 }
 
 /* ===========================
@@ -59,26 +65,28 @@ p {
   max-width: 800px;
   margin: 20px auto; /* Centra el párrafo */
   font-size: 1.1em;
+  line-height: 1.6;
+  color: #fff;
 }
 
 /* ===========================
    IMÁGENES
 =========================== */
 
-/* Todas las imágenes */
 img {
-  display: block; /* Quita espacios abajo */
-  margin: 20px auto; /* Centra la imagen */
-  max-width: 80%; /* No supera el ancho del contenedor */
-  border-radius: 15px; /* Bordes redondeados */
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4); /* Sombra elegante */
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: block;
+  margin: 30px auto;
+  max-width: 90%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Efecto zoom al pasar el mouse */
 img:hover {
-  transform: scale(1.05); /* Aumenta un poco el tamaño */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* Sombra más intensa */
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
 }
 
 /* ===========================
@@ -116,12 +124,6 @@ hr {
    ANIMACIÓN SUTIL DE ENTRADA
 =========================== */
 
-/* Agrega una animación al cargar el contenido */
-body {
-  animation: fadeIn 1.5s ease-in-out; /* Usa la animación "fadeIn" */
-}
-
-/* Definimos la animación */
 @keyframes fadeIn {
   from {
     opacity: 0; /* Comienza invisible */
@@ -137,7 +139,6 @@ body {
    BONUS: ESTILO PARA LOS COMENTARIOS EDUCATIVOS
 =========================== */
 
-/* Solo para que veas cómo se vería un bloque de notas o tips */
 .note {
   background-color: rgba(255, 255, 255, 0.2);
   padding: 10px 15px;
@@ -147,4 +148,25 @@ body {
   margin: 30px auto;
   font-style: italic;
   color: #000;
+}
+
+/* ===========================
+   BIOGRAFÍA DE TIM COOK
+=========================== */
+
+.biografia {
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.biografia h1 {
+  text-align: left;
+  margin-bottom: -20px;
+}
+
+.biografia h2 {
+  text-align: left;
 }
